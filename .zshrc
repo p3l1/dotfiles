@@ -13,10 +13,8 @@ export ZSH="/Users/philipp/.oh-my-zsh"
 export HOMEBREW_AUTO_UPDATE_SECS=604800
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# The import command is added by my Ansible mac-dev-playbook
-# Import powerlevel10k settings
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+# This step is done by the Ansible mac-dev-playbook
 
 # Uncomment the following line if you want to disable marking untracked files
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -33,6 +31,9 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Dark gray color for suggestions
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=0"
 
 # User configuration
 
