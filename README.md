@@ -1,8 +1,8 @@
-# geerlingguy's dotfiles
+# p3l1's dotfiles
 
-My configuration. Minimalist, but helps save a few thousand keystrokes a day. I use macOS, so I can only guarantee they'll work on a Mac, but I use some of these dotfiles on various linux servers, and they seem to be pretty flexible.
+This is a fork from geerlingguy/dotfiles. I made some additions and changes to fit my needs.
 
-You may also be interested in my [Mac Development Ansible Playbook](https://github.com/geerlingguy/mac-dev-playbook), which configures a Mac from scratch using Ansible, and incorporates the installation and updating of a set of dotfiles like this one.
+You may also be interested in my adjusted [Mac Development Ansible Playbook](https://github.com/p3l1/mac-dev-playbook), which configures my Mac from scratch using Ansible, and incorporates the installation and updating of a set of dotfiles like this one.
 
 ## License
 

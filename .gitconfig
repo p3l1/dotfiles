@@ -1,8 +1,8 @@
 [user]
-  name = Jeff Geerling
-  email = geerlingguy@mac.com
+  name = Philipp Herzog
+  email = philipp@herzo.gs
 [core]
-  editor = vi
+  editor = nano
   excludesfile = ~/.gitignore
   autocrlf = input
 [color]
@@ -11,9 +11,9 @@
   interactive = auto
   status = auto
 [init]
-  defaultBranch = master
+  defaultBranch = main
 [web]
-  browser = google-chrome
+  browser = firefox
 [credential]
   helper = osxkeychain
 [push]
