@@ -1,0 +1,13 @@
+#!/opt/homebrew/bin/zsh
+
+# Function to connect to specific Cisco VPN server
+cojobovpn() {
+  echo "INFO :: Starting openconnect vpn client..."
+
+  sudo openconnect \
+    --protocol=anyconnect \
+    --server=user.cojobo.org:4443 \
+    --certificate=/Users/philipp/.ssh/cojobo_vpn.crt \
+    --sslkey=/Users/philipp/.ssh/cojobo_vpn.key \
+    --servercert pin-sha256:Zy1gd3Tqwc6FLmEQwC1OSvYfqotLlsQWKNyr2USP/xc=
+}

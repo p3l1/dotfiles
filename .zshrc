@@ -11,7 +11,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Add Homebrew to PATH
 export PATH="/opt/homebrew/bin:$PATH"
+# Add Java OpenJDK to PATH
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/philipp/.oh-my-zsh"
@@ -83,3 +86,6 @@ function denter() {
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Alternative CiscoVPN client via CLI
+source ~/.openconnect
