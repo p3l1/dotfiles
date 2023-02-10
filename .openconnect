@@ -9,5 +9,5 @@ cojobovpn() {
     --server=user.cojobo.org:4443 \
     --certificate=/Users/philipp/.ssh/cojobo_vpn.crt \
     --sslkey=/Users/philipp/.ssh/cojobo_vpn.key \
-    --servercert pin-sha256:Zy1gd3Tqwc6FLmEQwC1OSvYfqotLlsQWKNyr2USP/xc=
+    --servercert pin-sha256:hGkA3PVbeMjuvN5MTkegyhx5JMo6C35EOGJ6cTBG/bA=
 }

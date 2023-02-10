@@ -38,6 +38,7 @@ HIST_STAMPS="dd.mm.yyyy"
 plugins=(
     git
     zsh-autosuggestions
+    docker
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -89,3 +90,6 @@ function denter() {
 
 # Alternative CiscoVPN client via CLI
 source ~/.openconnect
+
+# Alias for printing my public key
+alias pk="cat ~/.ssh/id_rsa.pub"
