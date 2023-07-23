@@ -15,6 +15,9 @@ fi
 export PATH="/opt/homebrew/bin:$PATH"
 # Add Java OpenJDK to PATH
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+# Add Android SDK to PATH
+export PATH="/Users/philipp/Library/Android/sdk/emulator:$PATH"
+export PATH="/Users/philipp/Library/Android/sdk/platform-tools:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/philipp/.oh-my-zsh"
