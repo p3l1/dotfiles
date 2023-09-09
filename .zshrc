@@ -91,8 +91,9 @@ function denter() {
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Alternative CiscoVPN client via CLI
-source ~/.openconnect
-
 # Alias for printing my public key
-alias pk="cat ~/.ssh/id_rsa.pub"
+alias pk="ssh-add -L"
+
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent

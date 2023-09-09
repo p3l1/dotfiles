@@ -1,6 +1,7 @@
 [user]
   name = Philipp Herzog
   email = philipp@herzo.gs
+	signingkey = B9308AD402FAC75B!
 [core]
   editor = nano
   excludesfile = ~/.gitignore
@@ -37,3 +38,5 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[commit]
+	gpgsign = true
