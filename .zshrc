@@ -84,7 +84,7 @@ function denter() {
      return 0
  fi
 
- docker exec -it $1 bash
+ docker exec -it $1 ash
  return 0
 }
 
@@ -94,6 +94,21 @@ function denter() {
 # Alias for printing my public key
 alias pk="ssh-add -L"
 
+
+# GPG related settings
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
+
+# SSH remote access
+remote_access_start() {
+ ssh -f -N -D 1337 tor
+}
+
+remote_access_check() {
+ ssh -O check tor
+}
+
+remote_access_stop() { 
+ ssh -O exit tor
+}
