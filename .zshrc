@@ -27,7 +27,7 @@ export HOMEBREW_AUTO_UPDATE_SECS=604800
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="powerlevel10k/powerlevel10k"
-source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
+source /opt/homebrew/opt/powerlevel10k/share/powerlevel10k/powerlevel10k.zsh-theme
 
 # Uncomment the following line if you want to disable marking untracked files
 DISABLE_UNTRACKED_FILES_DIRTY="true"
