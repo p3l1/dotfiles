@@ -15,9 +15,9 @@ fi
 export PATH="/opt/homebrew/bin:$PATH"
 # Add Java OpenJDK to PATH
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
-# Add Android SDK to PATH
-export PATH="/Users/philipp/Library/Android/sdk/emulator:$PATH"
-export PATH="/Users/philipp/Library/Android/sdk/platform-tools:$PATH"
+
+# Add poetry to PATH
+export PATH="$PATH:/Users/philipp/.local/bin/"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/philipp/.oh-my-zsh"
@@ -98,6 +98,7 @@ alias pk="ssh-add -L"
 # GPG related settings
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+export GPG_AGENT_SOCK=$(gpgconf --list-dirs agent-socket)
 gpgconf --launch gpg-agent
 
 # SSH remote access
@@ -112,3 +113,6 @@ remote_access_check() {
 remote_access_stop() { 
  ssh -O exit tor
 }
+
+# Scaleway CLI autocomplete initialization.
+eval "$(scw autocomplete script shell=zsh)"
