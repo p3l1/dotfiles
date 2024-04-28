@@ -114,5 +114,8 @@ remote_access_stop() {
  ssh -O exit tor
 }
 
-# Scaleway CLI autocomplete initialization.
+# Scaleway CLI autocompletion initialization.
 eval "$(scw autocomplete script shell=zsh)"
+
+# k3d CLI autocompletion
+eval "$(k3d completion zsh)"
