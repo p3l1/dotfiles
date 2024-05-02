@@ -93,18 +93,21 @@ function denter() {
 # Convert given JSON file to PKL format
 function json2pkl() {
  if [[ ! "$1" ]] ; then
-     echo "You must supply a path to a json file"
-     return 0
+     echo "You must supply a path to a JSON file"
+     return 1
  fi
 
- pkl eval -p input="$(cat $1)" -x 'new Parser {}.parse(read("prop:input"))' pkl:json
+ export PKL_JSON_INPUT_FILE="$(cat $1)"
+
+ pkl eval ~/.json.pkl
+ export PKL_JSON_INPUT_FILE=""
  return 0
 }
 
 function yaml2pkl() {
  if [[ ! "$1" ]] ; then
-     echo "You must supply a path to a json file"
-     return 0
+     echo "You must supply a path to a YAML file"
+     return 1
  fi
 
  export PKL_YAML_INPUT_FILE="$(cat $1)"

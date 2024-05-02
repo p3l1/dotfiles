@@ -1,0 +1,8 @@
+import "pkl:yaml"
+
+file = read("env:PKL_JSON_INPUT_FILE")
+parsed = new json.Parser {}.parse(file)
+
+output {
+  value = parsed
+}
