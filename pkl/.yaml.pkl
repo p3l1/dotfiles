@@ -1,0 +1,8 @@
+import "pkl:yaml"
+
+file = read("env:PKL_YAML_INPUT_FILE")
+parsed = new yaml.Parser {}.parse(file)
+
+output {
+  value = parsed
+}

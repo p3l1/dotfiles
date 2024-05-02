@@ -88,6 +88,33 @@ function denter() {
  return 0
 }
 
+
+# Apple PKL helper
+# Convert given JSON file to PKL format
+function json2pkl() {
+ if [[ ! "$1" ]] ; then
+     echo "You must supply a path to a json file"
+     return 0
+ fi
+
+ pkl eval -p input="$(cat $1)" -x 'new Parser {}.parse(read("prop:input"))' pkl:json
+ return 0
+}
+
+function yaml2pkl() {
+ if [[ ! "$1" ]] ; then
+     echo "You must supply a path to a json file"
+     return 0
+ fi
+
+ export PKL_YAML_INPUT_FILE="$(cat $1)"
+
+ pkl eval ~/.yaml.pkl
+ export PKL_YAML_INPUT_FILE=""
+ return 0
+}
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
